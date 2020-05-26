@@ -8,11 +8,20 @@ namespace Asp.Net.Mvc.Check.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+
+        public ActionResult Index(string id)
         {
             return View();
         }
 
+        public ActionResult CustomVariable()
+        {
+            ViewBag.Controller = "Home";
+            ViewBag.Action = "CustomVariable"; 
+            ViewBag.CustomVariable = RouteData.Values["id"];
+
+            return View();
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
