@@ -1,24 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace Asp.Net.Mvc.Check.Controllers
 {
     public class HomeController : Controller
     {
 
-        public ActionResult Index(string id)
+        public ActionResult Index()
         {
+            ViewBag.Name = "Home.Controllers";
+
             return View();
         }
 
-        public ActionResult CustomVariable()
+        public ActionResult CustomVariable(string id, string catchall)
         {
             ViewBag.Controller = "Home";
             ViewBag.Action = "CustomVariable"; 
             ViewBag.CustomVariable = RouteData.Values["id"];
+            ViewBag.CatchAll = catchall;
 
             return View();
         }
