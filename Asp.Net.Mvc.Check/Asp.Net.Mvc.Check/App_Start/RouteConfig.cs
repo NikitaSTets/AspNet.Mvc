@@ -13,9 +13,9 @@ namespace Asp.Net.Mvc.Check
 
             routes.MapMvcAttributeRoutes();
 
-            routes.MapRoute("ShopSchema2", "Shop/OldAction/{id}", new { controller = "Home", action = "Index", id = "defaultId" }, new
+            routes.MapRoute("ShopSchema2", "Shop/OldAction/{id}", new { controller = "New", action = "Index", id = "defaultId" }, new
             {
-                controller = "^H.*",
+                controller = "^N.*",
                 action = "Index|About",
                 id = new CustomConstraint("Chrome")
             },
@@ -36,11 +36,6 @@ namespace Asp.Net.Mvc.Check
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
-                new
-                {
-                    controller = "^H.*",
-                    action = "Index|About",
-                },
                 new[] { "Asp.Net.Mvc.Check.Controllers" }
             );
         }

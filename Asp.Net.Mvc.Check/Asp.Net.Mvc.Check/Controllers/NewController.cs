@@ -8,7 +8,7 @@ namespace Asp.Net.Mvc.Check.Controllers
         // GET: New
         public ActionResult Index()
         {
-            return View();
+            return RedirectToAction("Test");
         }
 
         [Route("NewAbout")]
