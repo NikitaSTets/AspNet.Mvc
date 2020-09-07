@@ -2,9 +2,9 @@
 
 namespace Asp.Net.Mvc.Check.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
-
         public ActionResult Index()
         {
             ViewBag.Name = "Home.Controllers";

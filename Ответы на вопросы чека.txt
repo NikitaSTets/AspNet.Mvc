@@ -1,0 +1,50 @@
+
+Перенести Солюшен отдельно от всех файлов проекта!!!!!!!
+
+MVC vs MVVM
+
+Они ооочень похожи,но есть небольшое отличие.
+
+В MVVM вьюха и модель более плотно связаны друг с другом и поэтмоу возникают проблемы с UnitTesting.
+
+---------------------------------------------------------------------------------------------
+
+MVC pattern
+
+1. Models, which contain or represent the data that users work with. These can be simple view
+models, which just represent data being transferred between views and controllers; or they
+can be domain models, which contain the data in a business domain as well as the operations,
+transformations, and rules for manipulating that data.
+2. Views, which are used to render some part of the model as a user interface.
+3. Controllers, which process incoming requests, perform operations on the model, and select
+views to render to the user.
+
+---------------------------------------------------------------------------------------------
+
+Application Lifecycle
+
+Request Lifecycle
+
+Dependency Injection
+
+Routing
+
+Filters
+
+Controllers
+
+Razor
+
+Views
+
+Application State Data (ViewData, ViewBag, TempData)
+
+Partial views
+
+Layout
+
+HTML Helpers
+
+Model binding
+
+Model validation
