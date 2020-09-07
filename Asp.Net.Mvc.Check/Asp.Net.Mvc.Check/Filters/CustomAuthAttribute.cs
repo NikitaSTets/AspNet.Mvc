@@ -9,18 +9,17 @@ namespace Asp.Net.Mvc.Check.Filters
         public void OnAuthentication(AuthenticationContext context)
         {
             var ident = context.Principal.Identity;
-            if (!ident.IsAuthenticated || !ident.Name.EndsWith("@google.com"))
+            if (!ident.IsAuthenticated || !ident.Name.EndsWith("k"))
             {
                 context.Result = new HttpUnauthorizedResult();
             }
-            context.Result = new EmptyResult();
         }
         public void OnAuthenticationChallenge(AuthenticationChallengeContext context)
         {
             if (context.Result == null || context.Result is HttpUnauthorizedResult)
             {
                 context.Result = new RedirectToRouteResult(new RouteValueDictionary {
-                    {"controller", "GoogleAccount"},
+                    {"controller", "Account"},
                     {"action", "Login"},
                     {"returnUrl", context.HttpContext.Request.RawUrl}
                 });

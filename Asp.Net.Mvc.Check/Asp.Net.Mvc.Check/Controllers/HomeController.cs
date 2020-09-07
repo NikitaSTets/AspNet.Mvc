@@ -1,8 +1,11 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
+using Asp.Net.Mvc.Check.Filters;
+using Asp.Net.Mvc.Check.Infrastructure;
 
 namespace Asp.Net.Mvc.Check.Controllers
 {
-    [Authorize]
+    [CustomAuth]
     public class HomeController : Controller
     {
         public ActionResult Index()
@@ -15,7 +18,7 @@ namespace Asp.Net.Mvc.Check.Controllers
         public ActionResult CustomVariable(string id, string catchall)
         {
             ViewBag.Controller = "Home";
-            ViewBag.Action = "CustomVariable"; 
+            ViewBag.Action = "CustomVariable";
             ViewBag.CustomVariable = RouteData.Values["id"];
             ViewBag.CatchAll = catchall;
 
@@ -27,6 +30,20 @@ namespace Asp.Net.Mvc.Check.Controllers
 
             return View();
         }
+
+        [HandleError]
+        public string RangeTest(int id)
+        {
+            if (id > 100)
+            {
+                return $"The id value is: {id}";
+            }
+            else
+            {
+                throw new ArgumentException();
+            }
+        }
+
 
         public ActionResult Contact()
         {

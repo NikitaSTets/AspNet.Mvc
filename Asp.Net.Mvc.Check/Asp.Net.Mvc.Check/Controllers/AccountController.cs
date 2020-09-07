@@ -6,7 +6,6 @@ namespace Asp.Net.Mvc.Check.Controllers
 {
     public class AccountController : Controller
     {
-        [CustomAuth]
         public ActionResult Login()
         {
             return View();
