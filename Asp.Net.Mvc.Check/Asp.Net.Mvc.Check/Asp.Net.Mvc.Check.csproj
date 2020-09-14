@@ -138,6 +138,8 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewController.cs" />
+    <Compile Include="Filters\ResultFilter.cs" />
+    <Compile Include="Filters\CustomActionAttribute.cs" />
     <Compile Include="Filters\CustomAuthAttribute.cs" />
     <Compile Include="Filters\RangeExceptionAttribute.cs" />
     <Compile Include="Global.asax.cs">

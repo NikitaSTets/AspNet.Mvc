@@ -44,7 +44,13 @@ namespace Asp.Net.Mvc.Check.Controllers
             }
         }
 
+        [CustomAction]
+        public string CustomActionFilterTest()
+        {
+            return "This is the FilterTest action";
+        }
 
+        [ResultFilter]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
