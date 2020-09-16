@@ -28,11 +28,25 @@
         </div>
     </div>
     <div class="container body-content">
+        @RenderSection("Header", false)
+        <div class="layout">
+            This is part of the layout
+        </div>
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+        <div class="layout">
+            This is part of the layout
+        </div>
+        @if (IsSectionDefined("Footer"))
+        {
+            @RenderSection("Footer")
+        }
+        else
+        {
+            <h4>This is the default footer</h4>
+        }
+        <div class="layout">
+            This is part of the layout
+        </div>
     </div>
 
     @Scripts.Render("~/bundles/jquery")

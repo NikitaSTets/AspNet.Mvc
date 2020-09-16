@@ -1,14 +1,32 @@
-﻿@{
-    ViewBag.Title = "Contact";
+﻿@using Asp.Net.Mvc.Check.Models
+@model PersonModel
+
+@{
+    ViewBag.Title = "Person Name";
+    Layout = "~/Views/_BasicLayout.cshtml";
 }
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 
 <address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
+    @{
+        const int age = 60;
+    }
+    <html>
+    <body>
+        @if (age > 50)
+        {
+            @Model.Name
+            <p>The age is  greater than 50.</p>
+        }
+        @foreach (string address in Model.Addresses)
+        {
+            <tr>
+                <td>@address</td>
+            </tr>
+        }
+    </body>
+</html>
 </address>
 
 <address>

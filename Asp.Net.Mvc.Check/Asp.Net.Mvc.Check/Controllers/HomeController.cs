@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Web.Mvc;
 using Asp.Net.Mvc.Check.Filters;
 using Asp.Net.Mvc.Check.Infrastructure;
+using Asp.Net.Mvc.Check.Models;
 
 namespace Asp.Net.Mvc.Check.Controllers
 {
@@ -53,9 +55,15 @@ namespace Asp.Net.Mvc.Check.Controllers
         [ResultFilter]
         public ActionResult Contact()
         {
+            var testModel = new PersonModel()
+            {
+                Name = "Test",
+                Addresses = new List<string>() { "St.Greenwood, Wate avenue"}
+            };
+
             ViewBag.Message = "Your contact page.";
 
-            return View();
+            return View(testModel);
         }
     }
 }

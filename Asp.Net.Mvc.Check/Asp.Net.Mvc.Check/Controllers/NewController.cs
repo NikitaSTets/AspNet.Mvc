@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using Asp.Net.Mvc.Check.Models;
 
 namespace Asp.Net.Mvc.Check.Controllers
 {
@@ -6,7 +7,7 @@ namespace Asp.Net.Mvc.Check.Controllers
     public class NewController : Controller
     {
         // GET: New
-        public ActionResult Index()
+        public ActionResult Index(PersonModel testClass)
         {
             return RedirectToAction("Test");
         }
@@ -20,7 +21,7 @@ namespace Asp.Net.Mvc.Check.Controllers
         }
 
         [Route("~/TestL")]
-        public ActionResult Test()
+        public ActionResult Test(TestEnum b)
         {
             ViewBag.Message = "Your application description page.";
 
