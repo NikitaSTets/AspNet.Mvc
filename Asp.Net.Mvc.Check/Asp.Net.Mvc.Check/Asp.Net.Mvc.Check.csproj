@@ -136,6 +136,7 @@
     <Compile Include="Controllers2\HomeController.cs" />
     <Compile Include="Controllers2\TController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BindingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ListController.cs" />
     <Compile Include="Controllers\NewController.cs" />
@@ -150,6 +151,7 @@
     <Compile Include="Infrastructure\CustomException.cs" />
     <Compile Include="Infrastructure\CustomHelpers.cs" />
     <Compile Include="Models\AddressModel.cs" />
+    <Compile Include="Models\AddressSummaryModel.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
     <Compile Include="Models\PersonModel.cs" />
     <Compile Include="Models\Role.cs" />
@@ -206,6 +208,11 @@
     <Content Include="Views\Home\Time.cshtml" />
     <Content Include="Views\List\Index.cshtml" />
     <Content Include="Views\List\CreatePerson.cshtml" />
+    <Content Include="Views\Binding\Index.cshtml" />
+    <Content Include="Views\Binding\CreatePerson.cshtml" />
+    <Content Include="Views\Binding\DisplaySummary.cshtml" />
+    <Content Include="Views\Binding\Names.cshtml" />
+    <Content Include="Views\Binding\Address.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
