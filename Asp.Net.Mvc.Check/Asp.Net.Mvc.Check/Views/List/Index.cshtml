@@ -1,0 +1,35 @@
+﻿@using Asp.Net.Mvc.Check.Infrastructure
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+@helper ListArrayItems(string[] items) {
+    <ul>
+        @foreach(string str in items) {
+            <li>@str</li>
+        }
+    </ul>
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+
+<body>
+<div>
+    Here are the fruits: @ListArrayItems(ViewBag.Fruits)
+</div>
+<div>
+    Here are the cities: @Html.ListArrayItems((string[])ViewBag.Cities)
+<div>
+    Here is the message:
+    <p>@Model</p>
+</div>
+</body>
+</html>
