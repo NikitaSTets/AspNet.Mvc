@@ -57,7 +57,7 @@ namespace Asp.Net.Mvc.Check.Controllers
         {
             var testModel = new PersonModel()
             {
-                Name = "Test",
+                FirstName = "Test",
                 Addresses = new List<string>() { "St.Greenwood, Wate avenue"}
             };
 

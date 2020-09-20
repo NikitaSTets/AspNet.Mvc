@@ -38,6 +38,11 @@ namespace Asp.Net.Mvc.Check
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
                 new[] { "Asp.Net.Mvc.Check.Controllers" }
             );
+
+            routes.MapRoute(
+                name: "FormRoute",
+                url: "app/forms/{controller}/{action}"
+            );
         }
     }
 }

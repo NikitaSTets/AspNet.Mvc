@@ -6,7 +6,6 @@ namespace Asp.Net.Mvc.Check.Controllers
     [RoutePrefix("Users")]
     public class NewController : Controller
     {
-        // GET: New
         public ActionResult Index(PersonModel testClass)
         {
             return RedirectToAction("Test");

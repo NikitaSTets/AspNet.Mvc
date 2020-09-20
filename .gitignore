@@ -40,3 +40,6 @@ node_modules
 **/[Cc]ompiler/[Rr]esources/**/*.js
 **/App_Data/*
 publish/
+*.tmp
+
+*.docx

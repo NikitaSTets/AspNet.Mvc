@@ -137,6 +137,7 @@
     <Compile Include="Controllers2\TController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ListController.cs" />
     <Compile Include="Controllers\NewController.cs" />
     <Compile Include="Filters\ResultFilter.cs" />
     <Compile Include="Filters\CustomActionAttribute.cs" />
@@ -147,8 +148,11 @@
     </Compile>
     <Compile Include="Infrastructure\CustomConstraint.cs" />
     <Compile Include="Infrastructure\CustomException.cs" />
+    <Compile Include="Infrastructure\CustomHelpers.cs" />
+    <Compile Include="Models\AddressModel.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
     <Compile Include="Models\PersonModel.cs" />
+    <Compile Include="Models\Role.cs" />
     <Compile Include="Models\TestEnum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -200,6 +204,8 @@
     <Content Include="Views\Home\TestPartial.cshtml" />
     <Content Include="Views\Home\StronglyTypedPartial.cshtml" />
     <Content Include="Views\Home\Time.cshtml" />
+    <Content Include="Views\List\Index.cshtml" />
+    <Content Include="Views\List\CreatePerson.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
