@@ -21,7 +21,7 @@ namespace Asp.Net.Mvc.Check.Controllers
         }
 
         [Route("~/TestL")]
-        public ActionResult Test(TestEnum b)
+        public ActionResult Test(TestEnum b = default)
         {
             ViewBag.Message = "Your application description page.";
 

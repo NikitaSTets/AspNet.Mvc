@@ -65,5 +65,11 @@ namespace Asp.Net.Mvc.Check.Controllers
 
             return View(testModel);
         }
+
+        [ChildActionOnly]
+        public ActionResult Time(DateTime time)
+        {
+            return PartialView(time);
+        }
     }
 }
