@@ -18,11 +18,7 @@ namespace Asp.Net.Mvc.Check.Models
 
         public string LastName { get; set; }
 
-        public DateTime BirthDate { get; set; }
-
         public AddressModel HomeAddress { get; set; }
-
-        public bool IsApproved { get; set; }
 
         public Role Role { get; set; }
     }
