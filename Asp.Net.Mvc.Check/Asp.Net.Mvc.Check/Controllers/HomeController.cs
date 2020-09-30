@@ -28,7 +28,7 @@ namespace Asp.Net.Mvc.Check.Controllers
         }
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewData["Message"] = "Your application description page."; ;
 
             return View();
         }
