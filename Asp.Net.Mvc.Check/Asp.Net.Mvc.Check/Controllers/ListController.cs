@@ -8,8 +8,9 @@ namespace Asp.Net.Mvc.Check.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Fruits = new string[] { "Apple", "Orange", "Pear" };
-            ViewBag.Cities = new string[] { "New York", "London", "Paris" };
+            ViewBag.Fruits = new[] { "Apple", "Orange", "Pear" };
+            ViewBag.Cities = new[] { "New York", "London", "Paris" };
+
             var message = "This is an HTML element: <input>";
 
             return View((object)message);

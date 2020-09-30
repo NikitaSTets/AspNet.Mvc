@@ -91,7 +91,6 @@ namespace Asp.Net.Mvc.Check.Controllers
             return View(addresses);
         }
 
-
         public ActionResult Address(IList<AddressSummaryModel> addresses)
         {
 

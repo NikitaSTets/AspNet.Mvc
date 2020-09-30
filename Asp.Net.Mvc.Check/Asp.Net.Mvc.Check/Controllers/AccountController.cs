@@ -1,6 +1,5 @@
 ﻿using System.Web.Mvc;
 using System.Web.Security;
-using Asp.Net.Mvc.Check.Filters;
 
 namespace Asp.Net.Mvc.Check.Controllers
 {
@@ -22,7 +21,6 @@ namespace Asp.Net.Mvc.Check.Controllers
                 return Redirect(returnUrl ?? Url.Action("Index", "Home"));
             }
 
-            //что за key параметр?
             ModelState.AddModelError("", "Incorrect username or password");
 
             return View();

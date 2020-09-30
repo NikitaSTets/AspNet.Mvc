@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Web.Mvc;
 using Asp.Net.Mvc.Check.Filters;
-using Asp.Net.Mvc.Check.Infrastructure;
 using Asp.Net.Mvc.Check.Models;
 
 namespace Asp.Net.Mvc.Check.Controllers
@@ -26,6 +25,7 @@ namespace Asp.Net.Mvc.Check.Controllers
 
             return View();
         }
+
         public ActionResult About()
         {
             ViewData["Message"] = "Your application description page."; ;
@@ -40,10 +40,8 @@ namespace Asp.Net.Mvc.Check.Controllers
             {
                 return $"The id value is: {id}";
             }
-            else
-            {
-                throw new ArgumentException();
-            }
+
+            throw new ArgumentException();
         }
 
         [CustomAction]
@@ -55,7 +53,7 @@ namespace Asp.Net.Mvc.Check.Controllers
         [ResultFilter]
         public ActionResult Contact()
         {
-            var testModel = new PersonModel()
+            var testModel = new PersonModel
             {
                 FirstName = "Test",
                 Addresses = new List<string>() { "St.Greenwood, Wate avenue"}
