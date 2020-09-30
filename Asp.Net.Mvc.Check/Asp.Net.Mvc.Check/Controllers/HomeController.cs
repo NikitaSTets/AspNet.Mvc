@@ -12,12 +12,15 @@ namespace Asp.Net.Mvc.Check.Controllers
         public ActionResult Index()
         {
             ViewBag.Name = "Home.Controllers";
+            TempData["test"] = "test";
 
             return View();
         }
 
         public ActionResult CustomVariable(string id, string catchall)
         {
+            var a = TempData["test"];
+
             ViewBag.Controller = "Home";
             ViewBag.Action = "CustomVariable";
             ViewBag.CustomVariable = RouteData.Values["id"];

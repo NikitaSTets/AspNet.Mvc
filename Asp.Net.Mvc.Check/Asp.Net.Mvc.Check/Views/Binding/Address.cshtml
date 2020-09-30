@@ -14,8 +14,14 @@
         {
             <fieldset>
                 <legend>Address @(i + 1)</legend>
-                <div><label>City:</label>@Html.Editor("[" + i + "].City")</div>
-                <div><label>Country:</label>@Html.Editor("[" + i + "].Country")</div>
+                <div>
+                    <label>City:</label>
+                    @Html.Editor("[" + i + "].City")
+                </div>
+                <div>
+                    <label>Country:</label>
+                    @Html.Editor("[" + i + "].Country")
+                </div>
             </fieldset>
         }
         <button type="submit">Submit</button>

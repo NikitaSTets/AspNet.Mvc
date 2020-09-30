@@ -17,19 +17,19 @@
             }
         </div>
     }
-<div class="view">
-    Home\Index Body
+    <div class="view">
+        Home\Index Body
 
-    @Html.Partial("TestPartial")
+        @Html.Partial("TestPartial")
 
-    @Html.Partial("StronglyTypedPartial", new[] { "Orange", "Banana" })
+        @Html.Partial("StronglyTypedPartial", new[] { "Orange", "Banana" })
 
-    @Html.Action("Time", new { time = DateTime.Now })
+        @Html.Action("Time", new { time = DateTime.Now })
 
-    @section Footer {
-        <div class="view">
-            This is the footer
-        </div>
-    }
-</div>
+        @section Footer {
+            <div class="view">
+                This is the footer
+            </div>
+        }
+    </div>
 </div>

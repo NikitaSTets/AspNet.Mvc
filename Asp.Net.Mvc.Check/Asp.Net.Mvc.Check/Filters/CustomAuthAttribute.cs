@@ -14,6 +14,7 @@ namespace Asp.Net.Mvc.Check.Filters
                 context.Result = new HttpUnauthorizedResult();
             }
         }
+
         public void OnAuthenticationChallenge(AuthenticationChallengeContext context)
         {
             if (context.Result == null || context.Result is HttpUnauthorizedResult)

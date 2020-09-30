@@ -6,14 +6,19 @@ namespace Asp.Net.Mvc.Check.Controllers
     [RoutePrefix("Users")]
     public class NewController : Controller
     {
-        public ActionResult Index(PersonModel testClass)
+        public ActionResult Index()
         {
+            var b = TempData["test"];
+
+
             return RedirectToAction("Test");
         }
 
         [Route("NewAbout")]
         public ActionResult About()
         {
+            var a = TempData["login"];
+                
             ViewBag.Message = "Your application description page.";
 
             return View();
