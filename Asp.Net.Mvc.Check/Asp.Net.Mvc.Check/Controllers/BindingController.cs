@@ -1,5 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Threading;
+using System.Web;
 using System.Web.Mvc;
 using Asp.Net.Mvc.Check.Models;
 
@@ -46,6 +50,7 @@ namespace Asp.Net.Mvc.Check.Controllers
 
         public ActionResult Index(int? id = 1)
         {
+            var a = TempData["test"];
             var dataItem = _personData.First(p => p.PersonId == id);
 
             return View(dataItem);
@@ -53,6 +58,13 @@ namespace Asp.Net.Mvc.Check.Controllers
 
         public ActionResult CreatePerson()
         {
+            var newCultureName = "fr-FR";
+            var cookie = new HttpCookie("_culture", newCultureName);
+            cookie.Expires = DateTime.Today.AddYears(1);
+            Response.SetCookie(cookie);
+
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(newCultureName);
+
             return View(new PersonModel());
         }
 
@@ -70,7 +82,7 @@ namespace Asp.Net.Mvc.Check.Controllers
         public ActionResult Names(string[] names)
         {
             names = names ?? new string[0];
-        
+
             return View(names);
         }
 
@@ -95,7 +107,7 @@ namespace Asp.Net.Mvc.Check.Controllers
         {
 
             addresses = addresses ?? new List<AddressSummaryModel>();
-        
+
             return View(addresses);
         }
     }

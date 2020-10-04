@@ -31,6 +31,8 @@ namespace Asp.Net.Mvc.Check.Controllers
 
         public ActionResult About()
         {
+            var a = TempData["test"];
+
             ViewData["Message"] = "Your application description page."; ;
 
             return View();
@@ -39,6 +41,8 @@ namespace Asp.Net.Mvc.Check.Controllers
         [HandleError]
         public string RangeTest(int id)
         {
+            var a = TempData["test"];
+
             if (id > 100)
             {
                 return $"The id value is: {id}";
@@ -50,12 +54,16 @@ namespace Asp.Net.Mvc.Check.Controllers
         [CustomAction]
         public string CustomActionFilterTest()
         {
+            var a = TempData["test"];
+
             return "This is the FilterTest action";
         }
 
         [ResultFilter]
         public ActionResult Contact()
         {
+            var a = TempData["test"];
+
             var testModel = new PersonModel
             {
                 FirstName = "Test",

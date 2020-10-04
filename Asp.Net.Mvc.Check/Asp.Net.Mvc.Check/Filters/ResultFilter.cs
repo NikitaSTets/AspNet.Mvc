@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Net;
 using System.Web.Mvc;
 
 namespace Asp.Net.Mvc.Check.Filters
@@ -10,6 +11,8 @@ namespace Asp.Net.Mvc.Check.Filters
         public void OnResultExecuting(ResultExecutingContext filterContext)
         {
             _stopwatch = Stopwatch.StartNew();
+
+            filterContext.Result = new EmptyResult();
         }
 
         public void OnResultExecuted(ResultExecutedContext filterContext)

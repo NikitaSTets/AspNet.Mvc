@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
+using Asp.Net.Mvc.Check.Content;
 
 namespace Asp.Net.Mvc.Check.Models
 {
@@ -11,7 +13,7 @@ namespace Asp.Net.Mvc.Check.Models
         [HiddenInput(DisplayValue = false)]
         public int PersonId { get; set; }
 
-        [DisplayName("First Name")]
+        [Display(ResourceType = typeof(AppResources), Name = "FirstName")]
         public string FirstName { get; set; }
 
         public IList<string> Addresses { get; set; }
