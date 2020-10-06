@@ -31,8 +31,8 @@ namespace Asp.Net.Mvc.Check.Controllers
 
         public ActionResult About()
         {
+            var b = Session["__ControllerTempData"];
             var a = TempData["test"];
-
             ViewData["Message"] = "Your application description page."; ;
 
             return View();

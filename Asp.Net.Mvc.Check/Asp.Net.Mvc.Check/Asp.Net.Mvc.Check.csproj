@@ -165,6 +165,7 @@
     </Compile>
     <Compile Include="Infrastructure\CustomConstraint.cs" />
     <Compile Include="Infrastructure\CustomHelpers.cs" />
+    <Compile Include="Infrastructure\CustomSessionTempDataProvider.cs" />
     <Compile Include="Infrastructure\ITestService.cs" />
     <Compile Include="Infrastructure\TestService.cs" />
     <Compile Include="Model Validation Attributes\FutureDateAttribute.cs" />

@@ -16,7 +16,7 @@ namespace Asp.Net.Mvc.Check
             FilterProviders.Providers.Remove(FilterProviders.Providers.OfType<FilterAttributeFilterProvider>().First());
             UnityConfig.Container = new UnityContainer();
             UnityConfig.Container.RegisterType<ITestService, TestService>(new PerRequestLifetimeManager());
-
+            UnityConfig.Container.RegisterType<ITempDataProvider, CustomSessionTempDataProvider>();
             FilterProviders.Providers.Add(new UnityFilterAttributeFilterProvider(UnityConfig.Container));
 
             DependencyResolver.SetResolver(new UnityDependencyResolver(UnityConfig.Container));
