@@ -69,6 +69,7 @@ namespace Asp.Net.Mvc.Check.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult CreatePerson(PersonModel model)
         {
             return View("Index", model);

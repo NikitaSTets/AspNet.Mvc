@@ -10,6 +10,7 @@
 
 @using (Html.BeginForm("DisplaySummary", "Binding"))
 {
+    @Html.AntiForgeryToken()
     <div>
         @Html.LabelFor(m => m.PersonId)
         @Html.EditorFor(m => m.PersonId)

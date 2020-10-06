@@ -59,6 +59,7 @@ namespace Asp.Net.Mvc.Check.Controllers
             return "This is the FilterTest action";
         }
 
+        [CustomAction]
         [ResultFilter]
         public ActionResult Contact()
         {
