@@ -8,5 +8,10 @@ namespace Asp.Net.Mvc.Check.Infrastructure
         {
             throw new NotImplementedException();
         }
+
+        public void Dispose()
+        {
+            var a = 1;
+        }
     }
 }
